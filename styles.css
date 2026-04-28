@@ -1,0 +1,14 @@
+:root{
+    /*Aquí puedes colocar los colores que vayas utilizando para usarlos tambien yo*/
+    --color1: white;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+/*A partir de aqui ya puedes darle estilo a la página*/
