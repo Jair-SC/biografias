@@ -1,14 +1,85 @@
-:root{
+:root {
     /*Aquí puedes colocar los colores que vayas utilizando para usarlos tambien yo*/
     --color1: white;
 }
 
-html{
+html {
     box-sizing: border-box;
+    font-family: sans-serif, Arial;
 }
 
-*, *::after, *::before{
+*,
+*::after,
+*::before {
     box-sizing: inherit;
 }
 
-/*A partir de aqui ya puedes darle estilo a la página*/
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#titulo{
+    display: block;
+    text-align: center;
+}
+
+#descripcion{
+    display: block;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 90vw;
+    height: 115vh;
+    margin: 1em auto;
+    gap: 0.2rem;
+    border: 1px solid black;
+    padding-top: 1rem;
+}
+
+.tarjeta{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 17em;
+    height: 20em;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.tarjeta:hover{
+    transform: rotateY(180deg);
+}
+
+.cara-delantera, .cara-trasera{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.cara-trasera{
+    transform: rotateY(180deg);
+}
+
+.imagen{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0.5em 0 0;
+}
+
+.nombre{
+    margin: 0;
+}
