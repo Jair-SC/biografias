@@ -83,3 +83,9 @@ body{
 .nombre{
     margin: 0;
 }
+
+.historia{
+    display: block;
+    font-size: 0.7em;
+    margin: 1.2em;
+}
