@@ -1,6 +1,13 @@
 :root {
     /*Aquí puedes colocar los colores que vayas utilizando para usarlos tambien yo*/
     --color1: white;
+    --dark-bg: #181818;
+    --mid-bg: gray;
+    --text-light: gainsboro;
+    --accent: #a0a0a0;
+    --navbar-bg: rgba(18, 18, 18, 0.95);
+    --footer-bg: #111111;
+    --separator: rgba(255, 255, 255, 0.1);
 }
 
 html {
@@ -18,6 +25,74 @@ body{
     padding: 0;
     margin: 0;
     background: linear-gradient(0deg, gray, #181818 50%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+/* ── NAVBAR ── */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    height: 60px;
+    background-color: var(--navbar-bg);
+    border-bottom: 1px solid var(--separator);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+ 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-light);
+}
+ 
+.logo-icono {
+    font-size: 1.4rem;
+}
+ 
+.logo-texto {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+}
+ 
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.3rem;
+}
+ 
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.88rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+ 
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* ── MAIN CONTENT ── */
+main {
+    flex: 1;
 }
 
 #titulo{
@@ -97,4 +172,106 @@ body{
     margin: 1.2em;
     color: gainsboro;
     text-align: justify;
+}
+
+/* ── FOOTER ── */
+footer {
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--separator);
+    color: var(--text-light);
+    margin-top: 2rem;
+}
+ 
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2.5rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ 
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+ 
+.footer-descripcion {
+    font-size: 0.82rem;
+    color: var(--accent);
+    line-height: 1.5;
+    margin: 0;
+}
+ 
+.footer-titulo {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--separator);
+}
+ 
+.footer-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+ 
+.footer-lista li,
+.footer-lista a {
+    font-size: 0.83rem;
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+}
+ 
+.footer-lista a:hover {
+    color: white;
+}
+ 
+.footer-contacto li {
+    color: var(--accent);
+}
+ 
+.footer-redes {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+ 
+.red-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--separator);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+ 
+.red-social:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+ 
+.footer-barra {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.78rem;
+    color: var(--accent);
+    border-top: 1px solid var(--separator);
 }
